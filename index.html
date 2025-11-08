@@ -25,55 +25,79 @@
   </header>
 
   <main class="container">
-    <!-- Lawyer Card 1 -->
-    <div class="lawyer-card">
-      <img src="images/lawyer1.jpg" alt="Dr. Anna Müller" class="lawyer-img" />
-      <h2>Dr. Anna Müller</h2>
-      <p class="specialty">Family & Divorce Law</p>
-      <p class="location">Berlin, Germany</p>
-      <div class="actions">
-        <button class="chat-btn">💬 Chat</button>
-        <button class="book-btn">📅 Book</button>
-        <button class="contact-btn">📞 Contact</button>
-      </div>
-    </div>
+    <div class="swipe-container">
+      <div class="cards-stack" id="cards-stack">
+        <!-- Lawyer Card 1 -->
+        <div class="swipe-card" data-lawyer='{"name":"Dr. Anna Müller","specialty":"Family & Divorce Law","location":"Berlin, Germany","image":"images/lawyer1.jpg"}'>
+          <div class="swipe-card-content">
+            <img src="images/lawyer1.jpg" alt="Dr. Anna Müller" class="lawyer-img" />
+            <h2>Dr. Anna Müller</h2>
+            <p class="specialty">Family & Divorce Law</p>
+            <p class="location">📍 Berlin, Germany</p>
+            <div class="card-info">
+              <p>Experienced in family law with over 10 years of expertise in divorce settlements and child custody cases.</p>
+            </div>
+          </div>
+          <div class="swipe-indicator swipe-left-indicator">PASS</div>
+          <div class="swipe-indicator swipe-right-indicator">CONTACT</div>
+        </div>
 
-    <!-- Lawyer Card 2 -->
-    <div class="lawyer-card">
-      <img src="images/lawyer2.jpg" alt="Markus Schneider" class="lawyer-img" />
-      <h2>Markus Schneider</h2>
-      <p class="specialty">Criminal Defense</p>
-      <p class="location">Munich, Germany</p>
-      <div class="actions">
-        <button class="chat-btn">💬 Chat</button>
-        <button class="book-btn">📅 Book</button>
-        <button class="contact-btn">📞 Contact</button>
-      </div>
-    </div>
+        <!-- Lawyer Card 2 -->
+        <div class="swipe-card" data-lawyer='{"name":"Markus Schneider","specialty":"Criminal Defense","location":"Munich, Germany","image":"images/lawyer2.jpg"}'>
+          <div class="swipe-card-content">
+            <img src="images/lawyer2.jpg" alt="Markus Schneider" class="lawyer-img" />
+            <h2>Markus Schneider</h2>
+            <p class="specialty">Criminal Defense</p>
+            <p class="location">📍 Munich, Germany</p>
+            <div class="card-info">
+              <p>Specialized in criminal defense with a strong track record of successful cases and client advocacy.</p>
+            </div>
+          </div>
+          <div class="swipe-indicator swipe-left-indicator">PASS</div>
+          <div class="swipe-indicator swipe-right-indicator">CONTACT</div>
+        </div>
 
-    <!-- Lawyer Card 3 -->
-    <div class="lawyer-card">
-      <img src="images/lawyer3.jpg" alt="Sophie Becker" class="lawyer-img" />
-      <h2>Sophie Becker</h2>
-      <p class="specialty">Corporate & Business Law</p>
-      <p class="location">Hamburg, Germany</p>
-      <div class="actions">
-        <button class="chat-btn">💬 Chat</button>
-        <button class="book-btn">📅 Book</button>
-        <button class="contact-btn">📞 Contact</button>
-      </div>
-    </div>
+        <!-- Lawyer Card 3 -->
+        <div class="swipe-card" data-lawyer='{"name":"Sophie Becker","specialty":"Corporate & Business Law","location":"Hamburg, Germany","image":"images/lawyer3.jpg"}'>
+          <div class="swipe-card-content">
+            <img src="images/lawyer3.jpg" alt="Sophie Becker" class="lawyer-img" />
+            <h2>Sophie Becker</h2>
+            <p class="specialty">Corporate & Business Law</p>
+            <p class="location">📍 Hamburg, Germany</p>
+            <div class="card-info">
+              <p>Expert in corporate law, helping businesses with contracts, mergers, and legal compliance.</p>
+            </div>
+          </div>
+          <div class="swipe-indicator swipe-left-indicator">PASS</div>
+          <div class="swipe-indicator swipe-right-indicator">CONTACT</div>
+        </div>
 
-    <!-- Lawyer Card 4 -->
-    <div class="lawyer-card">
-      <img src="images/lawyer4.jpg" alt="Jonas Fischer" class="lawyer-img" />
-      <h2>Jonas Fischer</h2>
-      <p class="specialty">Immigration Law</p>
-      <p class="location">Frankfurt, Germany</p>
-      <div class="actions">
-        <button class="chat-btn">💬 Chat</button>
-        <button class="book-btn">📅 Book</button>
-        <button class="contact-btn">📞 Contact</button>
+        <!-- Lawyer Card 4 -->
+        <div class="swipe-card" data-lawyer='{"name":"Jonas Fischer","specialty":"Immigration Law","location":"Frankfurt, Germany","image":"images/lawyer4.jpg"}'>
+          <div class="swipe-card-content">
+            <img src="images/lawyer4.jpg" alt="Jonas Fischer" class="lawyer-img" />
+            <h2>Jonas Fischer</h2>
+            <p class="specialty">Immigration Law</p>
+            <p class="location">📍 Frankfurt, Germany</p>
+            <div class="card-info">
+              <p>Dedicated immigration lawyer assisting with visas, residency permits, and citizenship applications.</p>
+            </div>
+          </div>
+          <div class="swipe-indicator swipe-left-indicator">PASS</div>
+          <div class="swipe-indicator swipe-right-indicator">CONTACT</div>
+        </div>
+      </div>
+
+      <!-- Action Buttons -->
+      <div class="swipe-buttons">
+        <button class="pass-btn" id="pass-btn" aria-label="Pass">❌</button>
+        <button class="contact-btn" id="contact-btn" aria-label="Contact">✅</button>
+      </div>
+
+      <!-- No more cards message -->
+      <div class="no-more-cards" id="no-more-cards" style="display: none;">
+        <h2>No more lawyers available</h2>
+        <p>Check back later for more matches!</p>
       </div>
     </div>
   </main>
